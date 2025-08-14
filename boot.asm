@@ -1,5 +1,5 @@
 
-section .multiboot_header
+section .multiboot_header ;-----------multiboot section start----------------
 header_start:
   dd 0xe85250d6 ;magic number for GRUB multiboot
   dd 0; protected mode code: won't let us do anything dangerous 
@@ -11,7 +11,7 @@ header_start:
     dw 0    ; type
     dw 0    ; flags
     dd 8    ; size
-header_end:
+header_end: ;-----------multiboot section start----------------
 
 global start
 section .text
